@@ -19,7 +19,7 @@ class DompdfWrapper
 	 * @param  string $html    The html to be rendered
 	 * @param  string $docname The name of the document to be served
 	 */
-	public function init($html, $docname)
+	public function getpdf($html, $docname)
 	{
 		require_once dirname(__FILE__).'/../DomPDF/dompdf_config.inc.php';
 
