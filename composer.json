@@ -1,20 +1,15 @@
 {
-    "name": "LilaConcepts/LilaConceptsBestPracticeBundle",
+    "name": "slik/dompdf-bundle",
     "version": "1.0.0-alpha",
-    "description": "Simple common, starter, empty, boilerplate-bundle to show best practice bundle development for Symfony2.1. This bundle has the right directory structure, coding standards, unittests and functional tests. It uses the Travis Continuous Integration buildbot, Composer for dependency management and Twig for templating. Read the documentation and fork/clone if you wish.",
+    "description": "A wrapper for using DomPDF inside Symfony 2",
     "keywords": ["symfony", "development", "bundle"],
     "type": "symfony-bundle",
     "license": "MIT",
     "authors": [
         {
-            "name": "Andre Lambert",
-            "email": "afj.lambert@me.com",
-            "homepage": "http://digitaalcv.nl/"
-        },
-        {
-            "name": "Evert Littooy",
-            "email": "evertonline@gmail.com",
-            "homepage": "http://littooy.nl/"
+            "name": "Christian Vermeulen",
+            "email": "chris@slik.eu",
+            "homepage": "http://www.slik.eu"
         }
     ],
     "require": {
@@ -23,7 +18,7 @@
         "symfony/symfony": "2.*"
     },
     "autoload":     {
-        "psr-0": { "LilaConcepts\\Bundle\\LilaConceptsBestPracticeBundle": "" }
+        "psr-0": { "Slik\\SlikDompdfBundle": "" }
     },
-    "target-dir": "LilaConcepts/Bundle/LilaConceptsBestPracticeBundle"
+    "target-dir": "Slik/SlikDompdfBundle"
 }

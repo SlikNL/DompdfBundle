@@ -1,6 +1,6 @@
 <?php
 
-namespace LilaConcepts\Bundle\LilaConceptsBestPracticeBundle\Tests\Functional\TestBundle\Controller;
+namespace Slik\SlikDompdfBundle\Tests\Functional\TestBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 

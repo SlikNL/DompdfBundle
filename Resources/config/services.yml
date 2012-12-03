@@ -1,7 +1,7 @@
 parameters:
-#    lilaconcepts_bestpractice.example.class: LilaConcepts\LilaConceptsBestPracticeBundle\Example
+#    slik_dompdf.example.class: LilaConcepts\SlikDompdfBundle\Example
 
 services:
-#    lilaconcepts_bestpractice.example:
-#        class: %lilaconcepts_bestpractice.example.class%
+#    slik_dompdf.example:
+#        class: %slik_dompdf.example.class%
 #        arguments: [@service_id, "plain_value", %parameter%]
