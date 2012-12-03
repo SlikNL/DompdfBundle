@@ -3,5 +3,5 @@ parameters:
 
 services:
     slik_dompdf:
-        class: Slik\DompdfBundle\Wrapper\Dompdf
+        class: Slik\DompdfBundle\Wrapper\DompdfWrapper
         arguments: []
