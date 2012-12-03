@@ -1,6 +1,6 @@
 {
     "name": "slik/dompdf-bundle",
-    "version": "1.0.0-alpha",
+    "version": "1.0.0",
     "description": "A wrapper for using DomPDF inside Symfony 2",
     "keywords": ["symfony", "development", "bundle"],
     "type": "symfony-bundle",
