@@ -8,8 +8,15 @@
     "authors": [
         {
             "name": "Christian Vermeulen",
-            "email": "chris@slik.eu",
-            "homepage": "http://www.slik.eu"
+            "email": "info@christianvermeulen.net",
+            "homepage": "http://christianvermeulen.net",
+            "role": "Developer"
+        },
+        {
+            "name": "Slik BV",
+            "email": "info@slik.eu",
+            "homepage": "http://www.slik.eu",
+            "role": "Copyright Owner"
         }
     ],
     "require": {
@@ -18,7 +25,7 @@
         "symfony/symfony": "2.*"
     },
     "autoload":     {
-        "psr-0": { "Slik\\SlikDompdfBundle": "" }
+        "psr-0": { "Slik\\DompdfBundle": "" }
     },
-    "target-dir": "Slik/SlikDompdfBundle"
+    "target-dir": "Slik/DompdfBundle"
 }
