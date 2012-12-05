@@ -24,7 +24,7 @@ class DompdfWrapper
 		require_once dirname(__FILE__).'/../DomPDF/dompdf_config.inc.php';
 
 		$pdf = new \DOMPDF();
-		var_dump(get_class($pdf));
+
 		$pdf->load_html($html);
 		$pdf->render();
 		$pdf->stream($docname);

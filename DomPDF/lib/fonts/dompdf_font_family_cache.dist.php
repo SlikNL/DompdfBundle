@@ -113,4 +113,11 @@
     'normal' => DOMPDF_FONT_DIR . '9c070a1d01452c0e9d342e8e5a6a625f',
     'italic' => DOMPDF_FONT_DIR . '883c11be1c1d819c1924a8c72fd8b5f7',
   ),
+  'sansus webissimo' => 
+  array (
+    'normal' => DOMPDF_FONT_DIR . 'sansus_webissimo-regular-webfont',
+    'bold' => DOMPDF_FONT_DIR . 'sansus_webissimo-regular-webfont',
+    'italic' => DOMPDF_FONT_DIR . 'sansus_webissimo-regular-webfont',
+    'bold_italic' => DOMPDF_FONT_DIR . 'sansus_webissimo-regular-webfont',
+  ),
 ) ?>
