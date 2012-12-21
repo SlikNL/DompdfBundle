@@ -31,6 +31,8 @@ Next add the following to your appkernel:
         new Slik\DompdfBundle\SlikDompdfBundle();
     );
 ```
+### Custom configuration
+Copy the dompdf_config.*.inc.php.dist files to dompdf_config.*.inc.php to your /app directory and follow the dompdf usage docs.
 
 ### Usage
 

@@ -21,7 +21,14 @@ class DompdfWrapper
 	 */
 	public function getpdf($html, $docname)
 	{
-		require_once dirname(__FILE__).'/../DomPDF/dompdf_config.inc.php';
+        // test if dompdf config exists in symfony app folder
+        $testFilePath = "/../../../../../../app/dompdf_config.inc.php";
+        if (file_exists(dirname(__FILE__).$testFilePath)) {
+            require_once(dirname(__FILE__).$testFilePath);
+        }
+        else {
+            require_once dirname(__FILE__).'/../DomPDF/dompdf_config.inc.php';
+		}
 
 		$pdf = new \DOMPDF();
 
