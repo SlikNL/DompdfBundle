@@ -39,9 +39,16 @@ Copy the dompdf_config.*.inc.php.dist files to dompdf_config.*.inc.php to your /
 Whenever you need to turn something into a pdf just use this anywhere in your controller:
 
 ```php
+    // Set some html and get the service
     $html = '<h1>Sample html</h1>';
     $dompdf = $this->get('slik_dompdf');
-    $dompdf->getpdf($html, "mydoc.pdf");
-```
 
-This will send the pdf as a download to the user.
+    // Generate the pdf
+    $dompdf->getpdf($html);
+
+    // Either stream the pdf to the browser
+    $dompdf->stream("myfile.pdf");
+
+    // Or get the output to handle it yourself
+    $pdfoutput = $dompdf->output();
+```
