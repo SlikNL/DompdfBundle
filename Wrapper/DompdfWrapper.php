@@ -19,21 +19,37 @@ class DompdfWrapper
 	 * @param  string $html    The html to be rendered
 	 * @param  string $docname The name of the document to be served
 	 */
-	public function getpdf($html, $docname)
+	public function getpdf($html)
 	{
-        // test if dompdf config exists in symfony app folder
-        $testFilePath = "/../../../../../../app/dompdf_config.inc.php";
-        if (file_exists(dirname(__FILE__).$testFilePath)) {
-            require_once(dirname(__FILE__).$testFilePath);
-        }
-        else {
-            require_once dirname(__FILE__).'/../DomPDF/dompdf_config.inc.php';
+		// test if dompdf config exists in symfony app folder
+		$testFilePath = "/../../../../../../app/dompdf_config.inc.php";
+		if (file_exists(dirname(__FILE__).$testFilePath)) {
+			require_once(dirname(__FILE__).$testFilePath);
+		}
+		else {
+			require_once dirname(__FILE__).'/../DomPDF/dompdf_config.inc.php';
 		}
 
-		$pdf = new \DOMPDF();
+		$this->pdf = new \DOMPDF();
 
-		$pdf->load_html($html);
-		$pdf->render();
-		$pdf->stream($docname);
+		$this->pdf->load_html($html);
+		$this->pdf->render();
+	}
+
+	/**
+	 * Stream the pdf document
+	 * @param  string $docname The name of the document
+	 */
+	public function stream($docname)
+	{
+		$this->pdf->stream($docname);
+	}
+
+	/**
+	 * get the raw pdf output
+	 */
+	public function output()
+	{
+		return $this->pdf->output();
 	}
 }
