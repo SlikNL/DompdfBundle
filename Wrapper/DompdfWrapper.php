@@ -32,6 +32,7 @@ class DompdfWrapper
 
 		$this->pdf = new \DOMPDF();
 
+		$this->pdf->set_paper(DOMPDF_DEFAULT_PAPER_SIZE);
 		$this->pdf->load_html($html);
 		$this->pdf->render();
 	}
