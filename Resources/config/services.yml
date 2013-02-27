@@ -4,4 +4,4 @@ parameters:
 services:
     slik_dompdf:
         class: Slik\DompdfBundle\Wrapper\DompdfWrapper
-        arguments: []
+        arguments: ["%kernel.root_dir%"]
