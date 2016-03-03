@@ -22,14 +22,18 @@ When using composer add the following to your composer.json
 
 and run `php composer.phar update slik/dompdf-bundle`.
 
-Next add the following to your appkernel:
+Next, add the following to `app/AppKernel.php`:
 
 ```php
-    // in AppKernel::registerBundles()
-    $bundles = array(
-        // Dependencies
-        new Slik\DompdfBundle\SlikDompdfBundle();
-    );
+// app/AppKernel.php
+    public function registerBundles()
+    {
+        $bundles = array(
+            // ...
+            new Slik\DompdfBundle\SlikDompdfBundle(),
+        );
+        // ...
+    }
 ```
 ### Custom configuration
 Copy the dompdf_config.*.inc.php.dist files to dompdf_config.*.inc.php to your /app directory and follow the dompdf usage docs.
