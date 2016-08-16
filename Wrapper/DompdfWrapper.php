@@ -16,10 +16,11 @@ class DompdfWrapper
 
 	/**
 	 * Render a pdf document
-	 * @param  string $html    The html to be rendered
-	 * @param  string $docname The name of the document to be served
-	 */
-	public function getpdf($html)
+     * @param string $html        The html to be rendered
+     * @param string $papersize   The size of the page to render, defaults to DOMPDF_DEFAULT_PAPER_SIZE
+     * @param string $orientation The orientation of the page to render, defaults to DOMPDF_DEFAULT_ORIENTATION
+     */
+	public function getpdf($html, $papersize = null, $orientation = null)
 	{
 		// test if dompdf config exists in symfony app folder
 		$testFilePath = "/../../../../../../app/dompdf_config.inc.php";
@@ -30,9 +31,13 @@ class DompdfWrapper
 			require_once dirname(__FILE__).'/../DomPDF/dompdf_config.inc.php';
 		}
 
+        // Have to use contants here because they are undefined until required above
+        $papersize = is_null($papersize) ? DOMPDF_DEFAULT_PAPER_SIZE : $papersize;
+        $orientation = is_null($orientation) ? DOMPDF_DEFAULT_ORIENTATION : $orientation;
+
 		$this->pdf = new \DOMPDF();
 
-		$this->pdf->set_paper(DOMPDF_DEFAULT_PAPER_SIZE);
+		$this->pdf->set_paper($papersize, $orientation);
 		$this->pdf->load_html($html);
 		$this->pdf->render();
 	}
